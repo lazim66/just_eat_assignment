@@ -56,9 +56,10 @@ def fetch_restaurants(postcode):
 def home():
     # Get restaurant data in desired format with hardcoded postcode
     # Replace 'IP327GH' with desired postcode
-    restaurants = fetch_restaurants('IP327GH')
-    # Render index.html template, passing in the fetched restaurant data
-    return render_template('index.html', restaurants=restaurants)
+    postcode = 'IP327GH'
+    restaurants = fetch_restaurants(postcode)
+    # Render index.html template, passing in postcode and the fetched restaurant data
+    return render_template('index.html', postcode=postcode, restaurants=restaurants)
 
 if __name__ == '__main__':
     # Run the Flask app with debugging enabled

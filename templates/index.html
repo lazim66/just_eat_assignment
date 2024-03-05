@@ -3,23 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Finder</title>
+    <title>Restaurants Near {{ postcode }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            border: 1px solid #ddd;
+            margin-top: -1px; /* Prevent double borders */
+            background-color: #f6f6f6;
+            padding: 12px;
+            transition: background-color 0.2s;
+        }
+        li:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
-    <h1>Restaurants</h1>
-    {% if restaurants %}
-        <ul>
-        {% for restaurant in restaurants %}
-            <li>
-                <h2>{{ restaurant.name }}</h2>
-                <p>Cuisines: {{ restaurant.cuisines }}</p>
-                <p>Rating: {{ restaurant.rating }}</p>
-                <p>Address: {{ restaurant.address }}</p>
-            </li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No restaurants found.</p>
-    {% endif %}
+    <div class="container">
+        <h1>Restaurants Near {{ postcode }} (10)</h1>
+        {% if restaurants %}
+            <ul>
+            {% for restaurant in restaurants %}
+                <li>
+                    <h2>{{ restaurant.name }}</h2>
+                    <p>Cuisines: {{ restaurant.cuisines }}</p>
+                    <p>Rating: {{ restaurant.rating }}</p>
+                    <p>Address: {{ restaurant.address }}</p>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No restaurants found.</p>
+        {% endif %}
+    </div>
 </body>
 </html>
