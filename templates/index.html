@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Finder</title>
+</head>
+<body>
+    <h1>Restaurants</h1>
+    {% if restaurants %}
+        <ul>
+        {% for restaurant in restaurants %}
+            <li>
+                <h2>{{ restaurant.name }}</h2>
+                <p>Cuisines: {{ restaurant.cuisines }}</p>
+                <p>Rating: {{ restaurant.rating }}</p>
+                <p>Address: {{ restaurant.address }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No restaurants found.</p>
+    {% endif %}
+</body>
+</html>
