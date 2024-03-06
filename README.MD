@@ -65,9 +65,9 @@ Simple Python/Flask-based web interface that fetches restaurant data (from Just 
 
 - "Low Delivery Fee" and "Deals" are not considered as cuisine types and should not displayed in the web interface
 - Rating data shown in interface is "starRating" from response data
-- Just Eat API does not require authentication and the data structure returned is consistent (speficifcally resturant data like name, cuisines, rating, and address)
+- Just Eat API does not require authentication and the data structure returned is consistent (specifically resturant data like name, cuisines, rating, and address)
 - No rate limiting or request restrictions imposed by API
-- The application is designed to fetch and display the first 10 restaurants from the API response for a given postcode (as apposed to the nearest 10)
+- The application is designed to fetch and display the first 10 restaurants from the API response for a given postcode (as opposed to the nearest 10)
 
 ## Future Improvements
 
