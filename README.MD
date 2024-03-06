@@ -13,6 +13,8 @@ Simple Python/Flask-based web interface that fetches restaurant data (from Just 
 
     ```
     git clone https://github.com/lazim66/just_eat_assignment.git
+    ```
+    ```
     cd just_eat_assignment
     ```
 
@@ -21,12 +23,16 @@ Simple Python/Flask-based web interface that fetches restaurant data (from Just 
     - For macOS/Linux:
       ```
       python3 -m venv venv
+      ```
+      ```
       source venv/bin/activate
       ```
 
     - For Windows:
       ```
       python -m venv venv
+      ```
+      ```
       venv\Scripts\activate
       ```
 
@@ -50,6 +56,10 @@ Simple Python/Flask-based web interface that fetches restaurant data (from Just 
 2. **View the Web Interface**
 
     Open a web browser and go to `http://127.0.0.1:5000/` to view the application with restaurant data
+
+3. **Stopping the Application**
+
+    Press `Ctrl+C` in the terminal to stop the Flask application
 
 ## Assumptions Made
 
