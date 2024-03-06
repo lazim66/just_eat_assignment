@@ -28,7 +28,7 @@ def fetch_restaurants(postcode):
     # Parse the JSON response from the API
     data = response.json()
 
-    filtered_resturants = []
+    filtered_restaurants = []
     # Get the first 10 restaurants from the response, if available
     restaurants = data.get('restaurants', [])[:10]
     for restaurant in restaurants:
@@ -43,14 +43,14 @@ def fetch_restaurants(postcode):
         address = f"{address_components['firstLine']}, {address_components['city']}, {address_components['postalCode']}"
         
         # Append the filtered restaurant data to the list
-        filtered_resturants.append({
+        filtered_restaurants.append({
             'name': name,
             'cuisines': cuisines,
             'rating': rating,
             'address': address
         })
 
-    return filtered_resturants
+    return filtered_restaurants
 
 @app.route('/')
 def home():
