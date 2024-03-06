@@ -12,8 +12,8 @@ Simple Python/Flask-based web interface that fetches restaurant data (from Just 
 1. **Clone the Repository**
 
     ```
-    git clone https://your-repository-url.git
-    cd your-project-directory
+    git clone https://github.com/lazim66/just_eat_assignment.git
+    cd just_eat_assignment
     ```
 
 2. **Set Up Virtual Environment**
